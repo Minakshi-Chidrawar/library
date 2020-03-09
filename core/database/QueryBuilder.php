@@ -37,4 +37,29 @@ class QueryBuilder
 
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
+
+    public function update($table, $parameters, $id)
+    {
+        $sql = "UPDATE $table SET name = :name, 
+                                    link = :link, 
+                                    content = :content
+                 WHERE id = :id";
+
+        try {
+            $statement = $this->pdo->prepare($sql);                                  
+            $statement->bindParam(':name', $parameters['name'], PDO::PARAM_STR);       
+            $statement->bindParam(':link', $parameters['link'], PDO::PARAM_STR);    
+            $statement->bindParam(':content', $parameters['content'], PDO::PARAM_STR);   
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);   
+            $statement->execute();
+        } catch (Exception $e) {
+            echo "Update failed (for a book {$parameters['name']}): " . $e->getMessage();
+        }
+    }
+
+    public function deleteRecord($table, $id)
+    {
+        $statement = $this->pdo->prepare("DELETE FROM {$table} WHERE id = $id");
+        $statement->execute();
+    }
 }
