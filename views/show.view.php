@@ -3,7 +3,7 @@
 
 <div class="card my-5">
     <div class="card-header">
-        <h4 class="py-4">Book: <?= $book->name ?></h4>
+        <h4 class="py-4">Book: <small><?= $book->name ?></small></h4>
     </div>
     <div class="card-body">
         <p><strong>Link</strong>: <?= $book->link ?></p>
