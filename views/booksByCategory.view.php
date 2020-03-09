@@ -1,11 +1,13 @@
 <?php require('partials/head.php'); ?>
     
 <h2 class="py-4">Category: 
-    <?php if (count($books) > 0): ?>
-        <?= $books[0]->categoryName ?>
-    <?php else : ?>
-        <?= "No Category" ?>
-    <?php endif ?>
+    <small>
+        <?php if (count($books) > 0): ?>
+            <?= $books[0]->categoryName ?>
+        <?php else : ?>
+            <?= "No Category" ?>
+        <?php endif ?>
+    </small>
 </h2>
 
 <ul>
