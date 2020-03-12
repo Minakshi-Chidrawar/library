@@ -12,7 +12,7 @@
 </div>
 
 <div class="">
-    <a href="index.php"><button class="btn btn-info">List of all books</button></a>
+    <a href="/"><button class="btn btn-info">List of all books</button></a>
 </div>
 
 <?php require('partials/footer.php'); ?>
