@@ -2,6 +2,5 @@
 
 $database = require 'core/bootstrap.php';
 
-$books = $database->selectAll('books');
-
-require 'views/index.view.php';
+require Router::load('routes.php')
+            ->direct(Request::uri(), Request::method());
