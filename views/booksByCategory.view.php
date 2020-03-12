@@ -13,7 +13,7 @@
 <ul>
     <?php if (count($books) > 0) : ?>
         <?php foreach($books as $book) : ?>
-            <a href="show.php?id=<?= $book->bookId ?>"><li><?= $book->bookName ?></li></a>
+            <a href="show?id=<?= $book->bookId ?>"><li><?= $book->bookName ?></li></a>
         <?php endforeach ?>
     <?php else : ?>
         <?= "There are no records" ?>
@@ -21,7 +21,7 @@
 </ul>
 
 <div class="">
-    <a href="index.php"><button class="btn btn-info">List of all books</button></a>
+    <a href="/"><button class="btn btn-info">List of all books</button></a>
 </div>
 
 <?php require('partials/footer.php'); ?>
