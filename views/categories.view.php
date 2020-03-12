@@ -4,7 +4,7 @@
 
 <ul>
     <?php foreach ($categories as $category) : ?>
-            <a href="booksByCategory.php?category_id=<?= $category->id ?>">
+            <a href="booksByCategory?category_id=<?= $category->id ?>">
                 <li><?= $category->name ?></li>
             </a>
     <?php endforeach ?>
