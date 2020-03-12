@@ -11,7 +11,7 @@
     </div>
 
     <div class="card-body">            
-        <form action="updated.php?id=<?= $book->id ?>" method="POST">
+        <form action="updated?id=<?= $book->id ?>" method="POST">
             <div class="col-md-9 text-center">
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Name</label>
